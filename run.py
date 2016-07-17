@@ -3,6 +3,7 @@
 import os
 import sys, getopt
 from beetle import Beetle
+from beetle import Paw
 
 def inputdata(argv):
     poolsize = '0';
@@ -34,8 +35,6 @@ if __name__ == '__main__':
     intro();
     
     #input data
-    poolsize = 0
-    iterations = 0
     poolsize, iterations = inputdata(sys.argv[1:]);
     
     #display input data
@@ -45,3 +44,4 @@ if __name__ == '__main__':
     for i in range(0, int(poolsize)):
         b = Beetle("b" + str(i));
         print(b.name);
+        b.paws[5].infos()
