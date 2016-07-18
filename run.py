@@ -38,6 +38,9 @@ if __name__ == '__main__':
     print ' #Pool : ' + poolsize + ' | #Iterations : ' + iterations;
    
     #creat beetle pool
+    poolbeetle = []
     for i in range(0, int(poolsize)):
-        b = Beetle("b" + str(i));
-        print(b);
+        b = Beetle("b" + str(i))
+        poolbeetle.append(b);
+        Utils.printBeetle(b);
+    print('pool of beetle object : ' + str(len(poolbeetle)))
