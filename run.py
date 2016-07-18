@@ -6,7 +6,7 @@ from beetle import Beetle
 from beetle import Paw
 from utils import Utils
 
-def inputdata(argv):
+def input_data(argv):
     poolsize = '0';
     iterations = '0';
     
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     Utils.intro();
     
     #input data
-    poolsize, iterations = inputdata(sys.argv[1:]);
+    poolsize, iterations = input_data(sys.argv[1:]);
     
     #display input data
     print ' #Pool : ' + poolsize + ' | #Iterations : ' + iterations;

@@ -9,4 +9,16 @@ class Utils(object):
 
     @staticmethod
     def printBeetle(beetle):
-        print(beetle)
+        print('Name : ' +beetle.name)
+        print('            ')
+        print('  +     +   ')
+        print('   \___/    ')
+        print('    | |   / ')
+        print(' /-------/  ')
+        print('/ |     |   ')
+        print('__|     |___')
+        print('  |     |   ')
+        print('  |     |   ')
+        print(' /-------\  ')
+        print('/         \ ')
+        print('            ')
