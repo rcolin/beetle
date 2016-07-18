@@ -6,8 +6,8 @@ class Paw(object):
         self.x = x;
         self.y = y;
 
-    def infos(self):
-        print('PAW => Stat : ' + str(self.stat) + ' | x : ' + str(self.x) + ' | y : ' + str(self.x))    
+    def __str__(self):
+        return 'stat : ' + str(self.stat) + ' | x : ' + str(self.x) + ' | y : ' + str(self.y)    
 
 class Beetle(object):
     
@@ -21,3 +21,9 @@ class Beetle(object):
         self.paws.append(Paw(0, 2, 0))
         self.paws.append(Paw(0, 2, 1))
 
+    def __str__(self):
+        bufferstr = 'Beetle name : ' + self.name + '\n'
+        for i in range(0, 6):
+            bufferstr += str(self.paws[i])
+            bufferstr += '\n'
+        return bufferstr

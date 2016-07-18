@@ -4,6 +4,7 @@ import os
 import sys, getopt
 from beetle import Beetle
 from beetle import Paw
+from utils import Utils
 
 def inputdata(argv):
     poolsize = '0';
@@ -26,13 +27,9 @@ def inputdata(argv):
             assert False, "unhandled option"
     return (poolsize, iterations)
 
-def intro():
-    os.system('clear');
-    print('\n************** Genetic algorithm of beetle moving **************\n');
-
 if __name__ == '__main__':
     #display start infos
-    intro();
+    Utils.intro();
     
     #input data
     poolsize, iterations = inputdata(sys.argv[1:]);
@@ -43,5 +40,4 @@ if __name__ == '__main__':
     #creat beetle pool
     for i in range(0, int(poolsize)):
         b = Beetle("b" + str(i));
-        print(b.name);
-        b.paws[5].infos()
+        print(b);
